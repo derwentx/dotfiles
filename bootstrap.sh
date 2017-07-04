@@ -5,14 +5,25 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
-		-avh --no-perms . ~;
-	source ~/.bash_profile;
+    for file in (
+        ".aliases",
+        ".bash_profile",
+        ".bash_prompt",
+        ".bashrc",
+        ".curlrc",
+        ".editorconfig",
+        ".exports",
+        ".functions",
+        ".gdbinit",
+        # ".gvimrc" # not finished yet
+        ".pylintrc",
+        ".screenrc",
+        ".tmux.conf",
+        ".zshrc",
+    )
+    if [[ -f "~/$file" || -L "~/$file" ]]; then
+        mv "~/$file" "~/$file.pre-dotfiles"
+    ln -s "$(pwd)/$file" "~/$file"
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
