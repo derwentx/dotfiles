@@ -158,7 +158,7 @@ alias mscore="/Applications/MuseScore\ 2.app/Contents/MacOS/mscore -x 1"
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias opera='/Applications/Opera.app/Contents/MacOS/Opera'
-alias finder="open -a finder"
+alias finder="open -a 'Path Finder'"
 
 ## C++
 alias cppcompile='c++ -std=c++11 -stdlib=libc++'
