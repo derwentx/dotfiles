@@ -672,7 +672,7 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 # defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Install the Solarized Dark theme for iTerm
-# open "${HOME}/init/Solarized Dark.itermcolors"
+open "${HOME}/init/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 # defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -837,36 +837,36 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Transmission.app                                                            #
 ###############################################################################
 
-# Use `~/Documents/Torrents` to store incomplete downloads
+# Use `~/Downloads/torrents` to store incomplete downloads
 # defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-# defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Torrents"
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Torrents"
 
 # Use `~/Downloads` to store completed downloads
 # defaults write org.m0k.transmission DownloadLocationConstant -bool true
 
 # Don’t prompt for confirmation before downloading
-# defaults write org.m0k.transmission DownloadAsk -bool false
-# defaults write org.m0k.transmission MagnetOpenAsk -bool false
+defaults write org.m0k.transmission DownloadAsk -bool false
+defaults write org.m0k.transmission MagnetOpenAsk -bool false
 
 # Don’t prompt for confirmation before removing non-downloading active transfers
 # defaults write org.m0k.transmission CheckRemoveDownloading -bool true
 
 # Trash original torrent files
-# defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
 # Hide the donate message
-# defaults write org.m0k.transmission WarningDonate -bool false
+defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
-# defaults write org.m0k.transmission WarningLegal -bool false
+defaults write org.m0k.transmission WarningLegal -bool false
 
 # IP block list.
 # Source: https://giuliomac.wordpress.com/2014/02/19/best-blocklist-for-transmission/
-# defaults write org.m0k.transmission BlocklistNew -bool true
-# defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
-# defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
+defaults write org.m0k.transmission BlocklistNew -bool true
+defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
+defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 
 # Randomize port on launch
-# defaults write org.m0k.transmission RandomPort -bool true
+defaults write org.m0k.transmission RandomPort -bool true
 
 ###############################################################################
 # Twitter.app                                                                 #
@@ -932,13 +932,13 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-# for app in "Activity Monitor" \
+for app in "Activity Monitor" \
 # 	"Address Book" \
 # 	"Calendar" \
 # 	"cfprefsd" \
 # 	"Contacts" \
 # 	"Dock" \
-# 	"Finder" \
+	"Finder" \
 # 	"Google Chrome Canary" \
 # 	"Google Chrome" \
 # 	"Mail" \
@@ -948,12 +948,12 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # 	"Safari" \
 # 	"SizeUp" \
 # 	"Spectacle" \
-# 	"SystemUIServer" \
+	"SystemUIServer" \
 # 	"Terminal" \
-# 	"Transmission" \
+	"Transmission" \
 # 	"Tweetbot" \
 # 	"Twitter" \
 # 	"iCal"; do
-# 	killall "${app}" &> /dev/null
+	killall "${app}" &> /dev/null
 # done
 # echo "Done. Note that some of these changes require a logout/restart to take effect."
