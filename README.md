@@ -1,6 +1,6 @@
 # Derwent's dotfiles
 
-![Screenshot of my shell prompt](http://i.imgur.com/a/5ElzH.png)
+![Screenshot of my shell prompt](http://i.imgur.com/wlud8Cx.png)
 
 ## Installation
 
