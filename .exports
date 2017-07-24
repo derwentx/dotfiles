@@ -27,7 +27,9 @@ export LC_ALL='en_AU.UTF-8';
 export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X';
+# export MANPAGER='less -X';
+# Use vimpager as manpater (supports mouse wheel and doesn't clear on quit)
+export MANPAGER='vimpager';
 
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
