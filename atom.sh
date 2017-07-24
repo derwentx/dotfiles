@@ -7,7 +7,7 @@ brew install ctags beautysh
 apm install linter autocomplete autocomplete-plus set-syntax atom-beautify yapf atom-ctags ctags-status
 
 # install python stuff
-pip install --upgrade pylama pylama-pylint yapf autopep8
+pip install --upgrade pylama pylama-pylint yapf autopep8 flake8
 apm install python-indent python-tools python-yapf linter-python autocomplete-python linter-pylama linter-pylint
 
 # install php stuff
