@@ -20,6 +20,7 @@ export files=(
     .screenrc
     .tmux.conf
     .vimrc
+    .vim_runtime
     .wgetrc
     .zshrc
 )
