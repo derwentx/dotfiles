@@ -79,6 +79,7 @@ brew install gdb
 # brew install knock
 # brew install netpbm
 brew install nmap
+brew install netcat
 brew install nikto
 # brew install pngcheck
 # brew install socat
@@ -131,7 +132,7 @@ brew install vim emacs tmux
 brew cask install iTerm2 github-desktop atom sequel-pro macvim transmit dash
 brew install ctags source-highlight npm
 brew cask install sublime-text3
-brew install mysql phpmyadmin
+brew install mysql phpmyadmin vimpager
 brew cask install apache
 
 
@@ -151,7 +152,8 @@ brew install sudolikeaboss
 
 # Install other apps
 
-brew cask install google-chrome opera slack skype path-finder firefox
+brew cask install google-chrome opera slack skype path-finder firefox disk-inventory-x
+brew cask install virtualbox
 
 # Install OS Tweaking apps
 
