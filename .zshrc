@@ -5,8 +5,37 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git, zsh-autosuggestions, zsh-syntx-highlighting, brew, npm, z, colorize, autopep8, cabal, dirhistory, lein, macports, osx, perl, pep8, python, pip, sublime, taskwarrior, wd, vi-mode, zsh_reload)
-bindkey -v
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntx-highlighting
+    brew
+    npm
+    z
+    colorize
+    autopep8
+    cabal
+    dirhistory
+    lein
+    macports
+    osx
+    perl
+    pep8
+    python
+    pip
+    sublime
+    taskwarrior
+    wd
+    vi-mode
+    zsh_reload
+)
+
+# overrides if in ssh session
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    echo "you are in an ssh session"
+    ZSH_THEME="blinks"
+fi
+
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -16,7 +45,8 @@ source ~/.exports
 source ~/.aliases
 source ~/.functions
 
-# handy keybindings
+# keybindings
+bindkey -e
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^K" kill-line
