@@ -19,8 +19,6 @@ export files=(
     .pylintrc
     .screenrc
     .tmux.conf
-    .vim
-    .vimrc
     .wgetrc
     .zshrc
 )
