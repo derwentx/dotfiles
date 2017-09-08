@@ -5,10 +5,10 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
-# Change working directory to the top-most Finder window location
-function cdf() { # short for `cdfinder`
-	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
-}
+# # Change working directory to the top-most Finder window location
+# function cdf() { # short for `cdfinder`
+# 	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
+# }
 #
 # # Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
 # function targz() {
@@ -233,4 +233,10 @@ function o() {
 # small enough for one screen.
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
+}
+
+
+function precmd() {
+    [ -d $HOME/.history ] || mkdir -p $HOME/.history
+    echo ": [$(date)] $$ $USER $OLDPWD\; $(fc -nl | tail -n 1)" >> $HOME/.history/bash_history-$(date +%Y%m%d)
 }

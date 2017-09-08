@@ -9,8 +9,14 @@ Desktop.ini
 ._*
 Thumbs.db
 
+# vi
+*~
+
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
 .tags
 .tags1
+
+# ignore build directory
+build/*

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Make vim the default editor.
-export EDITOR='vim';
+export EDITOR='mvim';
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;
@@ -50,3 +50,29 @@ export USER_NAME=$(whoami)
 export PATH="/usr/local/sbin:$PATH"
 # FUSE requires this
 export PATH="$PATH:/opt/gnu/sbin:/opt/gnu/bin"
+
+# CUDA Requires this
+export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
+export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=$DYLD_LIBRARY_PATH
+
+# ESP Requires this:
+export PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
+export IDF_PATH="$HOME/esp/esp-idf"
+
+# Micropython Requires this
+#
+
+# Pyenv requires this
+export PATH="$HOME/.pyenv:$PATH"
+eval "$(pyenv init -)"
+export PATH="$(pyenv root)/shims:$PATH"
+
+# Macports requires this
+export PATH="$PATH:/opt/local/bin:/opt/local/sbin"
+
+# Macvim-askpass requires this
+export PATH="$PATH:$HOME/.vim/bin"
+
+# Haskell requires this
+export PATH="$PATH:$HOME/.local/bin"

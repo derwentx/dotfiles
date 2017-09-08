@@ -15,12 +15,12 @@ export files=(
     .exports
     .functions
     .gdbinit
-    .gvimrc
     .pylintrc
     .screenrc
     .tmux.conf
     .wgetrc
     .zshrc
+    .vim
 )
 
 function doIt() {
