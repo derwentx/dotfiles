@@ -134,6 +134,7 @@ brew install ctags source-highlight npm
 brew cask install sublime-text3
 brew install mysql phpmyadmin vimpager cmake
 brew cask install apache
+brew install gpg # for GPG signing commits
 
 
 # Install security stuff

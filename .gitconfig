@@ -135,7 +135,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	# gpgsign = true
+	gpgsign = true
 
 [diff]
 
@@ -190,3 +190,6 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[user]
+	name = derwentx
+	email = derwentx@gmail.com
