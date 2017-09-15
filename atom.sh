@@ -6,19 +6,13 @@ pip install yapf
 brew install ctags beautysh
 apm install linter autocomplete autocomplete-plus set-syntax atom-beautify yapf atom-ctags ctags-status
 
-# install python stuff
-brew install pyenv
-pip install --upgrade pylama pylama-pylint yapf autopep8 flake8
+# Python stuff
 apm install python-indent python-tools python-yapf linter-python autocomplete-python linter-pylama linter-pylint atom-python-virtualenv
 
 # install php stuff
 apm install linter-php atom-autocomplete-php
 
-# Install Haskell stuff
-brew install stack
-stack setup
-brew install haskell-stack ghci
-stack install ghc-mod hlint stylish-haskell
+# Haskell stuff
 apm install language-haskell haskell-ghc-mod haskell-grammar ide-haskell ide-haskell-cabal linter-hlint
 
 # install workflow stuff
