@@ -7,6 +7,11 @@
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
+	# View abbreviated SHA, description, and history graph of the latest 20 commits
+	ll = log --graph --minimal --pretty='format:%C(yellow)%h %C(blue)%>(12)%ai %C(red)%d %C(reset)%s'
+
+    # format:%h %ci %s
+
 	# View the current working tree status using the short format
 	s = status -s
 
@@ -193,3 +198,8 @@
 [user]
 	name = derwentx
 	email = derwentx@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
