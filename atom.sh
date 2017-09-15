@@ -1,5 +1,5 @@
 # install languages
-apm install language-assembly language-elm language-haskell language-htaccess language-ini language-lisp language-lua language-supercollider language-tmux language-viml language-x86asm
+apm install language-assembly language-elm language-htaccess language-ini language-lisp language-lua language-supercollider language-tmux language-viml language-x86asm
 
 # install linter, beautify & autocomplete
 pip install yapf
@@ -17,12 +17,19 @@ apm install linter-php atom-autocomplete-php
 # Install Haskell stuff
 brew install stack
 stack setup
-brew install haskell-stack
+brew install haskell-stack ghci
 stack install ghc-mod hlint stylish-haskell
-apm install haskell-ghc-mod haskell-grammar ide-haskell ide-haskell-cabal linter-hlint
+apm install language-haskell haskell-ghc-mod haskell-grammar ide-haskell ide-haskell-cabal linter-hlint
 
 # install workflow stuff
-apm install split-and-move dash script sort-lines todo change-case project-manager platformio-ide-terminal join-lines-smarter change-case todo
+apm install split-and-move script project-manager platformio-ide-terminal todo local-settings split-diff
+
+# Beautiful markdown / LaTex
+brew install pandoc
+apm install markdown-preview-kramdown
+
+# Editor stuff
+apm install join-lines-smarter change-case sort-lines
 
 # Integrations
 apm install dash editorconfig
