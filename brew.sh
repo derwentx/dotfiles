@@ -88,6 +88,7 @@ brew install sqlmap
 # brew install tcpreplay
 # brew install tcptrace
 # brew install ucspi-tcp # `tcpserver` etc.
+brew install wireshark
 # brew install xpdf
 brew install xz
 
@@ -113,12 +114,7 @@ brew install vbindiff
 brew install webkit2png
 brew install zopfli
 
-#######################################
-# Derwent stuff, merge above
-#######################################
-
-
-# Install Shell
+# Setup ZSH Shell
 
 brew install curl
 brew install zsh zsh-completions zsh-syntax-highlighting
@@ -140,7 +136,7 @@ brew install gpg # for GPG signing commits
 # Install security stuff
 
 brew install htop mtr
-brew cask install wireshark etcher
+brew cask install etcher
 brew tap ravenac95/sudolikeaboss
 brew install sudolikeaboss
 
