@@ -47,7 +47,7 @@ fi;
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
-# Install GBU grep
+# Install GNU grep
 brew tap homebrew/dupes; brew install grep
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
@@ -74,8 +74,8 @@ brew install blueutil
 # brew install foremost
 brew install gdb
 # brew install hashpump
-# brew install hydra
-# brew install john
+brew install hydra
+brew install john
 # brew install knock
 # brew install netpbm
 brew install nmap
@@ -159,11 +159,6 @@ brew cask install virtualbox
 # Install OS Tweaking apps
 
 brew cask install gfxcardstatus istat-menus bartender hammerspoon
-
-
-
-
-
 
 # Remove outdated versions from the cellar.
 brew cleanup
