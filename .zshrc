@@ -5,7 +5,9 @@ export TERM="xterm-256color"
 export ZSH=~/.oh-my-zsh
 
 # ZSH customization
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="spaceship"
+
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 plugins=(
@@ -61,3 +63,6 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
 # Rbenv requires this
 eval "$(rbenv init -)"
+
+source "$ZSH_CUSTOM/themes/alien/alien.zsh"
+
