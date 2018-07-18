@@ -21,6 +21,7 @@ export files=(
     .wgetrc
     .zshrc
     .vim
+    .ctags
 )
 
 function doIt() {
