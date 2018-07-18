@@ -59,7 +59,8 @@ bindkey "^K" kill-line
 bindkey "^R" history-incremental-search-backward
 bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
-bindkey "^N" insert-last-word
+# bindkey "^N" insert-last-word
+bindkey "^N" history-search-forward
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
 # Rbenv requires this
@@ -67,3 +68,4 @@ eval "$(rbenv init -)"
 
 source "$ZSH_CUSTOM/themes/alien/alien.zsh"
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
