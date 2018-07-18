@@ -23,6 +23,9 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 # Always use color output for `ls`
 # alias ls="command ls ${colorflag}"
 alias ls="exa"
+alias lal="exa -al"
+alias lalt="exa -al -snew"
+
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -53,6 +56,8 @@ alias igrep='/usr/local/bin/grep -i --color=auto'
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1]);"'
+
 
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
@@ -185,3 +190,5 @@ alias remove="rm -rdf"
 alias wipe="ls -A1 | xargs rm -rdf"
 mkcd() { mkdir -p "$@" && cd "$@"; }
 alias up="cd .."
+
+alias nc.traditional="nc"
