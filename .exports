@@ -52,9 +52,9 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/opt/gnu/sbin:/opt/gnu/bin"
 
 # CUDA Requires this
-export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
-export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
-export LD_LIBRARY_PATH=$DYLD_LIBRARY_PATH
+# export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
+# export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
+# export LD_LIBRARY_PATH=$DYLD_LIBRARY_PATH
 
 # ESP Requires this:
 export PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
@@ -67,6 +67,7 @@ export IDF_PATH="$HOME/esp/esp-idf"
 export PATH="$HOME/.pyenv:$PATH"
 eval "$(pyenv init -)"
 export PATH="$(pyenv root)/shims:$PATH"
+eval "$(pyenv virtualenv-init -)"
 
 # Macports requires this
 export PATH="$PATH:/opt/local/bin:/opt/local/sbin"
@@ -76,3 +77,17 @@ export PATH="$PATH:$HOME/.vim/bin"
 
 # Haskell requires this
 export PATH="$PATH:$HOME/.local/bin"
+
+#adb
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+
+# Use Brew PHP over system
+export PATH="$(brew --prefix php@5.6)/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="$PATH:/Library/TeX/texbin"
+
