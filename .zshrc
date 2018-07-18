@@ -12,7 +12,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 plugins=(
     git
-    zsh-autosuggestions
+    # zsh-autosuggestions
     zsh-syntx-highlighting
     brew
     npm
@@ -42,6 +42,7 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+export ZSH_AUTOSUGGEST_USE_ASYNC
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
