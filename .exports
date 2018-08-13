@@ -84,10 +84,17 @@ export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 # Use Brew PHP over system
 export PATH="$(brew --prefix php@5.6)/bin:$PATH"
 
+# User Brew openssl over system
+export PATH="$(brew --prefix openssl)/bin:$PATH"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# LaTe requires this
 export PATH="$PATH:/Library/TeX/texbin"
+
+# Go requires this
+export PATH="$PATH:$HOME/go/bin"
 
