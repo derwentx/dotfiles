@@ -98,3 +98,6 @@ export PATH="$PATH:/Library/TeX/texbin"
 # Go requires this
 export PATH="$PATH:$HOME/go/bin"
 
+if [ -f '.secrets' ]; then
+    source '.secrets'
+fi
