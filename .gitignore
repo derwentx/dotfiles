@@ -20,3 +20,6 @@ Thumbs.db
 
 # ignore build directory
 build/*
+.netrwhist
+doc/tags
+.secrets
