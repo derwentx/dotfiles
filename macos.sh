@@ -32,6 +32,12 @@ echo "backup complete."
 exit
 
 ###############################################################################
+# Warning!                                                                    #
+###############################################################################
+
+# A lot of these scripts are out of date, proceed with caution
+
+###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 
@@ -45,7 +51,7 @@ exit
 # Set standby delay to 24 hours (default is 1 hour)
 # sudo pmset -a standbydelay 86400
 
-# Disable the sound effects on boot
+# Disable the sound effects on boot - doesn't actually work any more
 sudo nvram SystemAudioVolume=" "
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
@@ -71,7 +77,7 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 # Increase window resize speed for Cocoa applications
 # defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
-# Expand save panel by default
+# Expand save panel by default - !!! must have
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
