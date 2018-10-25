@@ -182,6 +182,7 @@ alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias opera='/Applications/Opera.app/Contents/MacOS/Opera'
 alias finder="open -a 'Path Finder'"
 alias pf="open -a 'Path Finder'"
+alias arduino='/Applications/Arduino.app/Contents/MacOS/Arduino'
 
 ## C++
 alias cppcompile='c++ -std=c++11 -stdlib=libc++'
