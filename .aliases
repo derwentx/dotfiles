@@ -190,7 +190,14 @@ alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 ## Shell
 alias remove="rm -rdf"
 alias wipe="ls -A1 | xargs rm -rdf"
-mkcd() { mkdir -p "$@" && cd "$@"; }
+# mkcd() { mkdir -p "$@" && cd "$@"; }
 alias up="cd .."
 
 alias nc.traditional="nc"
+
+
+##################################################
+# Note:
+##################################################
+# Looking for a particular functionality?
+# Don't forget to check .functions
