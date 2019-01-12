@@ -45,7 +45,7 @@ brew install bash
 brew install bash-completion2
 
 # Install GNU grep
-brew tap homebrew/dupes; brew install grep
+brew tap homebrew/dupes
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 brew install the_silver_searcher
@@ -53,9 +53,9 @@ brew install ack
 brew install vim --with-override-system-vi
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+brew install grep
+brew install openssh
+brew install screen
 brew install homebrew/php/php56 --with-gmp
 
 # Install `wget` with IRI support.
@@ -185,7 +185,6 @@ brew install dark-mode
 brew install lua lua-jit
 brew install pv
 brew install rename
-# brew install rhino
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install testssl
