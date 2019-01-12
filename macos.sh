@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# ~/.macos — https://mths.be/macos
+###############################################################################
+# One-time MacOS specific configuration                                       #
+###############################################################################
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
