@@ -13,7 +13,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
     git
     # zsh-autosuggestions
-    zsh-syntx-highlighting
+    zsh-syntax-highlighting
     brew
     npm
     z
