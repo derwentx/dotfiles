@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+
 
 # Check for Homebrew
 if test ! $(which brew)
@@ -30,17 +30,17 @@ brew tap Caskroom/cask
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Install more recent versions of some macOS tools.
+# Save Homebrew’s installed location.
+BREW_PREFIX=$(brew --prefix)
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
+ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
 # Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
 brew install bash
 brew install bash-completion2
 
@@ -62,9 +62,9 @@ brew install homebrew/php/php56 --with-gmp
 brew install wget --with-iri
 
 # Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
+if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
+  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
+  chsh -s "${BREW_PREFIX}/bin/bash";
 fi;
 
 # Setup ZSH Shell
@@ -74,7 +74,7 @@ brew install zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 brew install git
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-chsh /usr/local/bin/zsh
+chsh "${BREW_PREFIX}/bin/zsh"
 
 # Build tools
 brew install cmake bazel boost-build m4 automake autoconf
