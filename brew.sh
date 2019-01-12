@@ -50,13 +50,14 @@ brew tap homebrew/dupes
 brew install findutils
 brew install the_silver_searcher
 brew install ack
-brew install vim --with-override-system-vi
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
+brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
-brew install homebrew/php/php56 --with-gmp
+brew install php
+brew install gmp
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
