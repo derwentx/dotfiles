@@ -43,7 +43,7 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_USE_ASYNC
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Import enviroment
