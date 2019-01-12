@@ -240,3 +240,14 @@ function precmd() {
     [ -d $HOME/.history ] || mkdir -p $HOME/.history
     echo ": [$(date)] $$ $USER $OLDPWD\; $(fc -nl | tail -n 1)" >> $HOME/.history/bash_history-$(date +%Y%m%d)
 }
+
+##################################################
+# macOS Specific Functions
+##################################################
+
+function enable-dark-mode() {
+  defaults write "${1}/Contents/Info.plist" NSRequiresAquaSystemAppearance false
+}
+function disable-dark-mode() {
+  defaults delete "${1}/Contents/Info.plist" NSRequiresAquaSystemAppearance
+}
