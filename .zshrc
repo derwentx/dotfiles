@@ -69,3 +69,6 @@ eval "$(rbenv init -)"
 source "$ZSH_CUSTOM/themes/alien/alien.zsh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# added by travis gem
+[ -f /Users/derwent/.travis/travis.sh ] && source /Users/derwent/.travis/travis.sh
