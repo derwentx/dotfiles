@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Make vim the default editor.
-export EDITOR='mvim';
+export EDITOR='nvim';
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;
@@ -35,13 +35,6 @@ export MANPAGER='vimpager';
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
 
-# Set default editor to atom
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
 
 # usename stuff
 export USER_NAME=$(whoami)
@@ -60,8 +53,6 @@ export PATH="$PATH:/opt/gnu/sbin:/opt/gnu/bin"
 export PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
 export IDF_PATH="$HOME/esp/esp-idf"
 
-# Micropython Requires this
-#
 
 # Pyenv requires this
 export PATH="$HOME/.pyenv:$PATH"
@@ -92,7 +83,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# LaTe requires this
+# LaTeX requires this
 export PATH="$PATH:/Library/TeX/texbin"
 
 # Go requires this
@@ -101,3 +92,6 @@ export PATH="$PATH:$HOME/go/bin"
 if [ -f '.secrets' ]; then
     source '.secrets'
 fi
+
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH";

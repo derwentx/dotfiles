@@ -1,0 +1,62 @@
+# vim: set ft=sh:
+
+fresh freshshell/fresh bin/fresh --bin
+
+# Common shell config
+fresh shell/functions.sh
+fresh shell/exports.sh
+fresh shell/aliases.sh
+
+# Bash specific shell config
+fresh-options --file="~/.bashrc"
+    fresh freshshell/fresh contrib/source-build.sh
+    fresh shell/.bashrc
+    fresh shell/bash_prompt.sh
+fresh-options
+
+fresh shell/.bash_profile --file="~/.bash_profile"
+
+# Zsh specific shell config
+fresh-options --file="~/.zshrc"
+    fresh freshshell/fresh contrib/source-build.sh
+    fresh shell/.zshrc
+fresh-options
+
+# Actual dotfiles in root directory
+
+# Version Control config
+
+# TODO: figure out which of these can go in `~/.config/`
+
+mkdir -p .links
+
+export names=(
+    .ctags
+    .curlrc
+    .editorconfig
+    .gdbinit
+    .gitconfig
+    .gitignore
+    .hgignore
+    .hushlogin
+    .inputrc
+    .local.gitconfig
+    .pylintrc
+    .screenrc
+    .secrets
+    .tmux.conf
+    .wgetrc
+)
+for name in "${names[@]}"; do
+    dst="$(pwd)/${name}"
+    src="$HOME/${name}"
+
+    if [[ -f $src || -d $src ]]
+    then
+        mv $src "$HOME/$name.pre-dotfiles"
+    elif [[ -L $src ]]
+    then
+        rm $src
+    fi
+    ln -s $dst $src
+done
