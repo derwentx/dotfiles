@@ -48,7 +48,7 @@ export names=(
     .wgetrc
 )
 for name in "${names[@]}"; do
-    dst="$(pwd)/${name}"
+    dst="$HOME/.dotfiles/${name}"
     src="$HOME/${name}"
 
     if [[ -f $src || -d $src ]]
