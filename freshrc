@@ -14,7 +14,9 @@ fresh-options --file="~/.bashrc"
     fresh shell/bash_prompt.sh
 fresh-options
 
-fresh shell/.bash_profile --file="~/.bash_profile"
+fresh-options --file="~/.bash_profile"
+    fresh shell/.bash_profile
+fresh-options
 
 # Zsh specific shell config
 fresh-options --file="~/.zshrc"
