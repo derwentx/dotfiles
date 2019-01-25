@@ -39,6 +39,11 @@ export GPG_TTY=$(tty);
 # usename stuff
 export USER_NAME=$(whoami)
 
+# Coreutils requires this
+if [ -n "$(which brew)" ]; then
+    export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+fi
+
 # MTR requires this
 export PATH="/usr/local/sbin:$PATH"
 # FUSE requires this
@@ -55,28 +60,34 @@ export IDF_PATH="$HOME/esp/esp-idf"
 
 
 # Pyenv requires this
-export PATH="$HOME/.pyenv:$PATH"
-eval "$(pyenv init -)"
-export PATH="$(pyenv root)/shims:$PATH"
-eval "$(pyenv virtualenv-init -)"
+if [ -n "$(which pyenv)" ]; then
+    export PATH="$HOME/.pyenv:$PATH";
+    eval "$(pyenv init -)";
+    export PATH="$(pyenv root)/shims:$PATH";
+    eval "$(pyenv virtualenv-init -)";
+fi
 
 # Macports requires this
 export PATH="$PATH:/opt/local/bin:/opt/local/sbin"
 
 # Macvim-askpass requires this
-export PATH="$PATH:$HOME/.vim/bin"
+# export PATH="$PATH:$HOME/.vim/bin"
 
 # Haskell requires this
 export PATH="$PATH:$HOME/.local/bin"
 
 #adb
-export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+# export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 
 # Use Brew PHP over system
-export PATH="$(brew --prefix php@7.2)/bin:$PATH"
+if [ -n "$(which brew)" ]; then
+    export PATH="$(brew --prefix php@7.2)/bin:$PATH"
+fi
 
 # User Brew openssl over system
-export PATH="$(brew --prefix openssl)/bin:$PATH"
+if [ -n "$(which brew)" ]; then
+    export PATH="$(brew --prefix openssl)/bin:$PATH"
+fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -94,4 +105,4 @@ if [ -f '.secrets' ]; then
 fi
 
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+# export PATH="$HOME/bin:$PATH";
