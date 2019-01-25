@@ -55,7 +55,8 @@ for name in "${names[@]}"; do
 
     if [[ -f $src || -d $src ]]
     then
-        mv $src "$HOME/$name.pre-dotfiles"
+        [ -d "$HOME/.pre-dotfiles" ] || mkdir "$HOME/.pre-dotfiles";
+        mv $src "$HOME/.pre-dotfiles/$name"
     elif [[ -L $src ]]
     then
         rm $src
