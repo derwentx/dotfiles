@@ -88,7 +88,10 @@ brew install bash
 # Setup ZSH Shell
 brew install zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+# git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "$(brew --prefix zsh)/bin/zsh" /etc/shells; then
