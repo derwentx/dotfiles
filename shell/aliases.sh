@@ -9,22 +9,26 @@ else # macOS `ls`
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
-# List all files colorized in long format
-# alias l="ls -lF ${colorflag}"
-alias l="exa -lF"
+if [ -n "$(which exa)" ]; then
+	# List all files colorized in long format
+	# alias l="ls -lF ${colorflag}"
+	alias l="exa -lF"
 
-# List all files colorized in long format, including dot files
-# alias la="ls -laF ${colorflag}"
-alias la="exa -laF"
+	# List all files colorized in long format, including dot files
+	# alias la="ls -laF ${colorflag}"
+	alias la="exa -laF"
 
-# List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+	# List only directories
+	# alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
-# Always use color output for `ls`
-# alias ls="command ls ${colorflag}"
-alias ls="exa"
-alias lal="exa -al"
-alias lalt="exa -al -snew"
+	# Always use color output for `ls`
+	# alias ls="command ls ${colorflag}"
+	alias ls="exa"
+	alias lal="exa -al"
+	alias lalt="exa -al -snew"
+else
+	alias ls="command ls ${colorflag}"
+fi
 
 
 # Always enable colored `grep` output
