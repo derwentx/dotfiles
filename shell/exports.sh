@@ -67,6 +67,11 @@ if [ -n "$(which pyenv)" ]; then
     eval "$(pyenv virtualenv-init -)";
 fi
 
+# Rbenv requires this
+if [ -n "$(which rbenv)" ]; then
+    eval "$(rbenv init -)"
+fi
+
 # Macports requires this
 export PATH="$PATH:/opt/local/bin:/opt/local/sbin"
 

@@ -58,8 +58,6 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" history-search-forward
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
-# Rbenv requires this
-eval "$(rbenv init -)"
 
 source "$ZSH_CUSTOM/themes/alien/alien.zsh"
 
