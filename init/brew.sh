@@ -165,11 +165,12 @@ brew cask install firefox
 # brew cask install discord slack skype
 
 # productivity
-brew cask install alfred synergy bettertouchtool
-# brew cask install cheatsheet 
+brew cask install alfred bettertouchtool
+# brew cask install cheatsheet synergy
 
 # Cloud storage
-brew cask install dropbox google-drive
+brew cask install dropbox 
+brew cask install google-backup-and-sync
 
 # Finder
 brew cask install path-finder 
@@ -180,6 +181,7 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json quicklook-csv
 brew cask install disk-inventory-x 
 # brew cask install exercism
 brew cask install balenaetcher
+brew cask install 1password
 
 # Audio engineering
 # brew cask install soundflower soundflowerbed milkytracker
@@ -187,7 +189,8 @@ brew cask install balenaetcher
 # Install OS Tweaking apps
 brew cask install gfxcardstatus hammerspoon keepingyouawake
 # (Paid apps)
-# brew cask install istat-menus bartender 
+# brew cask install istat-menus
+brew cask install bartender 
 # Android Notifications
 brew cask install noti
 
