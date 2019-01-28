@@ -30,8 +30,6 @@ fresh-options
 
 # TODO: figure out which of these can go in `~/.config/`
 
-mkdir -p .links
-
 export names=(
     .ctags
     .curlrc
