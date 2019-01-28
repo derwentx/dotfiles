@@ -39,9 +39,21 @@ export GPG_TTY=$(tty);
 # usename stuff
 export USER_NAME=$(whoami)
 
-# Coreutils requires this
 if [ -n "$(which brew)" ]; then
+    # Use GNU Coreutils over system
     export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+    # Use GNU Grep over system
+    export PATH="$(brew --prefix grep)/libexec/gnubin:$PATH"
+    # Use GNU Findutils over system
+    export PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
+    # Use GNU Sed over system
+    export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
+    # Use Brew curl over system
+    export PATH="$(brew --prefix curl)/bin:$PATH"
+    # User Brew openssl over system
+    export PATH="$(brew --prefix openssl)/bin:$PATH"
+    # Use Brew PHP over system
+    # export PATH="$(brew --prefix php@7.2)/bin:$PATH"
 fi
 
 # MTR requires this
@@ -83,16 +95,6 @@ export PATH="$PATH:$HOME/.local/bin"
 
 #adb
 # export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
-
-# Use Brew PHP over system
-if [ -n "$(which brew)" ]; then
-    export PATH="$(brew --prefix php@7.2)/bin:$PATH"
-fi
-
-# User Brew openssl over system
-if [ -n "$(which brew)" ]; then
-    export PATH="$(brew --prefix openssl)/bin:$PATH"
-fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
