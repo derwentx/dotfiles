@@ -61,3 +61,13 @@ for name in "${names[@]}"; do
     fi
     ln -s $dst $src
 done
+
+# NVIM stuff
+[ -d "$HOME/.config/nvim" ] || mkdir -p "$HOME/.config/nvim";
+fresh-options --file="~/.config/nvim/init.vim"
+    fresh derwentx/nvim prelude.vim
+    fresh derwentx/nvim plugins.vim
+    fresh derwentx/nvim global.vim
+    fresh derwentx/nvim keys.vim
+    fresh derwentx/nvim filetypes.vim
+fresh-options
