@@ -29,10 +29,10 @@ alias lalt="exa -al -snew"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
-alias grep='/usr/local/bin/grep --color=auto'
-alias fgrep='/usr/local/bin/fgrep --color=auto'
-alias egrep='/usr/local/bin/egrep --color=auto'
-alias igrep='/usr/local/bin/grep -i --color=auto'
+# alias grep='/usr/local/bin/grep --color=auto'
+# alias fgrep='/usr/local/bin/fgrep --color=auto'
+# alias egrep='/usr/local/bin/egrep --color=auto'
+# alias igrep='/usr/local/bin/grep -i --color=auto'
 
 # Enable aliases to be sudo’ed
 # alias sudo='sudo '
